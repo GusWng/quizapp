@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/fragezeichen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fragezeichen"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup"
+        app:layout_constraintBottom_toTopOf="@id/resetButton"
+        android:layout_margin="24dp"
+        />
+    <ImageView
+        android:id="@+id/rufzeichen"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rufzeichen"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:adjustViewBounds="true"
+        android:visibility="gone"
+        android:scaleY="1.4"
+        android:scaleX="1.4"
+        />
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Question"
+        android:textSize="26sp"
+        android:layout_margin="36dp"
+        android:textColor="#111"
+        android:layout_marginLeft="48dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="16dp"
+        />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/question"
+        android:paddingStart="72dp"
+        android:paddingLeft="72dp">
+
+        <RadioButton
+            android:id="@+id/answerA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="9dp"
+            android:onClick="onRadioButtonClick"
+            android:text="A"
+            app:layout_constraintTop_toBottomOf="@id/question" />
+
+
+        <RadioButton
+            android:id="@+id/answerB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="9dp"
+            android:onClick="onRadioButtonClick"
+            android:text="B"
+            app:layout_constraintTop_toBottomOf="@id/answerA" />
+
+        <RadioButton
+            android:id="@+id/answerC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="9dp"
+            android:onClick="onRadioButtonClick"
+            android:text="C"
+            app:layout_constraintTop_toBottomOf="@id/answerB" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/scoreTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="YOUR SCORE IS:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        android:textSize="32sp"
+        android:textColor="#111"/>
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="64dp"
+        android:text="0"
+        android:textColor="@color/correct"
+        android:textSize="42sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scoreTitle"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/wrongs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/wrong"
+        android:textSize="42sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/score"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/exitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:onClick="exit"
+        android:paddingHorizontal="40dp"
+        android:text="Exit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:onClick="reset"
+        android:text="RESET"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
